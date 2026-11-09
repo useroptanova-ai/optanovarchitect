@@ -1,0 +1,26 @@
+[project]
+name = "optanovarchitect"
+version = "0.1.0"
+description = "Local architecture and planning toolkit for the OPTANOVA Worker system."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Optanovarchitect" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.9",
+    "pytest>=8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.backend"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/optanovarchitect"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
